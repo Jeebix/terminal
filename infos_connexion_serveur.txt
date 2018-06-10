@@ -1,0 +1,3 @@
+• url serveur dev perso: http://www.jbb-php7.dmp:8306/
+• utilisateur: admin
+• mdp: 824NDwhC

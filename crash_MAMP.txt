@@ -1,0 +1,1 @@
+Dossier MAMP -- ouvrir le fichier db -- supprimer les fichiers ib_logfile1 et ib_logfile0 -- réouvrir MAMP
