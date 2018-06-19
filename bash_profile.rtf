@@ -1,307 +1,326 @@
 {\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf400
-{\fonttbl\f0\fmodern\fcharset0 Courier;}
-{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
-{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+{\fonttbl\f0\fnil\fcharset0 Monaco;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red98\green94\blue76;
+\red246\green246\blue239;\red244\green0\blue95;\red224\green213\blue97;\red157\green101\blue255;\red88\green209\blue235;
+\red152\green224\blue36;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c100000;\cssrgb\c45882\c44314\c36863;
+\cssrgb\c97255\c97255\c94902;\cssrgb\c97647\c14902\c44706;\cssrgb\c90196\c85882\c45490;\cssrgb\c68235\c50588\c100000;\cssrgb\c40000\c85098\c93725;
+\cssrgb\c65098\c88627\c18039;}
 \paperw11900\paperh16840\margl1440\margr1440\vieww15180\viewh12040\viewkind0
 \deftab720
-\pard\pardeftab720\sl280\partightenfactor0
+\pard\pardeftab720\sl360\partightenfactor0
 
-\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
-#  ---------------------------------------------------------------------------\
-#\
-#  Description:  This file holds all my BASH configurations and aliases\
-#\
-#  Sections:\
-#  1.  Environment Configuration\
-#  2.  Make Terminal Better (remapping defaults and adding functionality)\
-#  3.  File and Folder Management\
-#  4.  Searching\
-#  5.  Process Management\
-#  6.  Networking\
-#  7.  System Operations & Information\
-#  8.  Web Development\
-#  9.  Reminders & Notes\
-#\
-#  ---------------------------------------------------------------------------\
+\f0\fs24 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 #  ---------------------------------------------------------------------------\strokec5 \
+\strokec4 #\strokec5 \
+\strokec4 #  Description:  This file holds all my BASH configurations and aliases\strokec5 \
+\strokec4 #\strokec5 \
+\strokec4 #  Sections:\strokec5 \
+\strokec4 #  1.  Environment Configuration\strokec5 \
+\strokec4 #  2.  Make Terminal Better (remapping defaults and adding functionality)\strokec5 \
+\strokec4 #  3.  File and Folder Management\strokec5 \
+\strokec4 #  4.  Searching\strokec5 \
+\strokec4 #  5.  Process Management\strokec5 \
+\strokec4 #  6.  Networking\strokec5 \
+\strokec4 #  7.  System Operations & Information\strokec5 \
+\strokec4 #  8.  Web Development\strokec5 \
+\strokec4 #  9.  Reminders & Notes\strokec5 \
+\strokec4 #\strokec5 \
+\strokec4 #  ---------------------------------------------------------------------------\strokec5 \
 \
-#   -------------------------------\
-#   1. ENVIRONMENT CONFIGURATION\
-#   -------------------------------\
+\strokec4 #   -------------------------------\strokec5 \
+\strokec4 #   1. ENVIRONMENT CONFIGURATION\strokec5 \
+\strokec4 #   -------------------------------\strokec5 \
 \
-#   Change Prompt\
-#   ------------------------------------------------------------\
-    export PS1="__________________________________________________________________________________________\\n| \\w @ \\h (\\u) \\n| => "\
-    export PS2="| => "\
+\strokec4 #   Change Prompt\strokec5 \
+\strokec4 #   ------------------------------------------------------------\strokec5 \
+    \strokec6 export\strokec5  PS1=\strokec7 "______________________________________________________________________________________________________________\\n| \\[\\e[1;32m\\] \\w\\[\\e[0m\\]\\[\\e[1;30m\\] @\\[\\e[0m\\]\\[\\e[0;34m\\] \\h\\[\\e[0m\\]\\[\\e[1;31m\\] (\\u)\\[\\e[0m\\] \\[\\e[1;35m\\][\strokec8 \\$\strokec7 (git branch 2>/dev/null | grep '^*' | colrm 1 2)]\\[\\e[0m\\] \\n| => "\strokec5 \
+    \strokec6 export\strokec5  PS2=\strokec7 "| => "\strokec5 \
 \
-#   Set Paths\
-#   ------------------------------------------------------------\
-#   export PATH="$PATH:/usr/local/bin/"\
-#   export PATH="/usr/local/git/bin:/sw/bin/:/usr/local/bin:/usr/local/:/usr/local/sbin:/usr/local/mysql/bin:$PATH"\
+\strokec4 #   Set Paths\strokec5 \
+\strokec4 #   ------------------------------------------------------------\strokec5 \
+\strokec4 #   export PATH="$PATH:/usr/local/bin/"\strokec5 \
+\strokec4 #   export PATH="/usr/local/git/bin:/sw/bin/:/usr/local/bin:/usr/local/:/usr/local/sbin:/usr/local/mysql/bin:$PATH"\strokec5 \
 \
-#   Set Default Editor (change 'Nano' to the editor of your choice)\
-#   ------------------------------------------------------------\
-#   export EDITOR=/usr/bin/nano\
+\strokec4 #   Set Default Editor (change 'Nano' to the editor of your choice)\strokec5 \
+\strokec4 #   ------------------------------------------------------------\strokec5 \
+\strokec4 #   export EDITOR=/usr/bin/vim\strokec5 \
 \
-#   Set default blocksize for ls, df, du\
-#   from this: http://hints.macworld.com/comment.php?mode=view&cid=24491\
-#   ------------------------------------------------------------\
-    export BLOCKSIZE=1.2k\
+\strokec4 #   Set default blocksize for ls, df, du\strokec5 \
+\strokec4 #   from this: http://hints.macworld.com/comment.php?mode=view&cid=24491\strokec5 \
+\strokec4 #   ------------------------------------------------------------\strokec5 \
+    \strokec6 export\strokec5  BLOCKSIZE=1k\
 \
-#   Add color to terminal\
-#   (this is all commented out as I use Mac Terminal Profiles)\
-#   from http://osxdaily.com/2012/02/21/add-color-to-the-terminal-in-mac-os-x/\
-#   ------------------------------------------------------------\
-    export CLICOLOR=1\
-    export LSCOLORS=ExFxBxDxCxegedabagacad\
+\strokec4 #   Add color to terminal\strokec5 \
+\strokec4 #   (this is all commented out as I use Mac Terminal Profiles)\strokec5 \
+\strokec4 #   from http://osxdaily.com/2012/02/21/add-color-to-the-terminal-in-mac-os-x/\strokec5 \
+\strokec4 #   ------------------------------------------------------------\strokec5 \
+    \strokec6 export\strokec5  CLICOLOR=1\
+\strokec4 #   export LSCOLORS=ExFxBxDxCxegedabagacad\strokec5 \
+    \strokec6 export\strokec5  LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd\
 \
+\strokec4 #   -----------------------------\strokec5 \
+\strokec4 #   2. MAKE TERMINAL BETTER\strokec5 \
+\strokec4 #   -----------------------------\strokec5 \
 \
-#   -----------------------------\
-#   2. MAKE TERMINAL BETTER\
-#   -----------------------------\
+\strokec9 alias\strokec5  cp=\strokec7 'cp -iv'\strokec5                            \strokec4 # Preferred 'cp' implementation\strokec5 \
+\strokec9 alias\strokec5  mv=\strokec7 'mv -iv'\strokec5                            \strokec4 # Preferred 'mv' implementation\strokec5 \
+\strokec9 alias\strokec5  mkdir=\strokec7 'mkdir -pv'\strokec5                      \strokec4 # Preferred 'mkdir' implementation\strokec5 \
+\strokec9 alias\strokec5  ll=\strokec7 'ls -FGlAhp'\strokec5                        \strokec4 # Preferred 'ls' implementation\strokec5 \
+\strokec9 alias\strokec5  less=\strokec7 'less -FSRXc'\strokec5                     \strokec4 # Preferred 'less' implementation\strokec5 \
+\strokec10 cd\strokec5 () \{ \strokec9 builtin\strokec5  \strokec9 cd\strokec5  \strokec7 "\strokec5 $@\strokec7 "\strokec6 ;\strokec5  ls -AF\strokec6 ;\strokec5  \}            \strokec4 # Always list directory contents upon 'cd'\strokec5 \
+\strokec9 alias\strokec5  cd..=\strokec7 'cd ../'\strokec5                          \strokec4 # Go back 1 directory level (for fast typers)\strokec5 \
+\strokec9 alias\strokec5  ..=\strokec7 'cd ../'\strokec5                            \strokec4 # Go back 1 directory level\strokec5 \
+\strokec9 alias\strokec5  ...=\strokec7 'cd ../../'\strokec5                        \strokec4 # Go back 0 directory levels\strokec5 \
+\strokec9 alias\strokec5  .3=\strokec7 'cd ../../../'\strokec5                      \strokec4 # Go back 3 directory levels\strokec5 \
+\strokec9 alias\strokec5  .4=\strokec7 'cd ../../../../'\strokec5                   \strokec4 # Go back 4 directory levels\strokec5 \
+\strokec9 alias\strokec5  .5=\strokec7 'cd ../../../../../'\strokec5                \strokec4 # Go back 5 directory levels\strokec5 \
+\strokec9 alias\strokec5  .6=\strokec7 'cd ../../../../../../'\strokec5             \strokec4 # Go back 6 directory levels\strokec5 \
+\strokec9 alias\strokec5  sudo=\strokec7 'sudo su'\strokec5                         \strokec4 # Start sudo session (exit to leave)\strokec5 \
+\strokec9 alias\strokec5  edit=\strokec7 'subl'\strokec5                            \strokec4 # edit:         Opens any file in sublime editor\strokec5 \
+\strokec9 alias\strokec5  f=\strokec7 'open -a Finder ./'\strokec5                  \strokec4 # f:            Opens current directory in MacOS Finder\strokec5 \
+\strokec9 alias\strokec5  \strokec6 ~\strokec5 =\strokec7 "cd ~"\strokec5                               \strokec4 # ~:            Go Home\strokec5 \
+\strokec9 alias\strokec5  c=\strokec7 'clear'\strokec5                              \strokec4 # c:            Clear terminal display\strokec5 \
+\strokec9 alias\strokec5  which=\strokec7 'type -all'\strokec5                      \strokec4 # which:        Find executables\strokec5 \
+\strokec9 alias\strokec5  path=\strokec7 'echo -e $\{PATH//:/\\\\n\}'\strokec5          \strokec4 # path:         Echo all executable Paths\strokec5 \
+\strokec9 alias\strokec5  show_options=\strokec7 'shopt'\strokec5                   \strokec4 # Show_options: display bash options settings\strokec5 \
+\strokec9 alias\strokec5  fix_stty=\strokec7 'stty sane'\strokec5                   \strokec4 # fix_stty:     Restore terminal settings when screwed up\strokec5 \
+\strokec9 alias\strokec5  cic=\strokec7 'set completion-ignore-case On'\strokec5    \strokec4 # cic:          Make tab-completion case-insensitive\strokec5 \
+\strokec10 mcd\strokec5  () \{ mkdir -p \strokec7 "\strokec5 $1\strokec7 "\strokec5  \strokec6 &&\strokec5  \strokec9 cd\strokec5  \strokec7 "\strokec5 $1\strokec7 "\strokec6 ;\strokec5  \}        \strokec4 # mcd:          Makes new Dir and jumps inside\strokec5 \
+\strokec10 trash\strokec5  () \{ \strokec9 command\strokec5  mv \strokec7 "\strokec5 $@\strokec7 "\strokec5  \strokec6 ~\strokec5 /.Trash \strokec6 ;\strokec5  \}     \strokec4 # trash:        Moves a file to the MacOS trash\strokec5 \
+\strokec10 ql\strokec5  () \{ qlmanage -p \strokec7 "\strokec5 $*\strokec7 "\strokec5  \strokec6 >&\strokec5  /dev/null\strokec6 ;\strokec5  \}    \strokec4 # ql:           Opens any file in MacOS Quicklook Preview\strokec5 \
+\strokec9 alias\strokec5  DT=\strokec7 'tee ~/Desktop/terminalOut.txt'\strokec5     \strokec4 # DT:           Pipe content to file on MacOS Desktop\strokec5 \
 \
-alias cp='cp -iv'                           # Preferred 'cp' implementation\
-alias mv='mv -iv'                           # Preferred 'mv' implementation\
-alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation\
-alias ll='ls -FGlAhp'                       # Preferred 'ls' implementation\
-alias less='less -FSRXc'                    # Preferred 'less' implementation\
-cd() \{ builtin cd "$@"; ls; \}               # Always list directory contents upon 'cd'\
-alias cd..='cd ../'                         # Go back 1 directory level (for fast typers)\
-alias ..='cd ../'                           # Go back 1 directory level\
-alias ...='cd ../../'                       # Go back 2 directory levels\
-alias .3='cd ../../../'                     # Go back 3 directory levels\
-alias .4='cd ../../../../'                  # Go back 4 directory levels\
-alias .5='cd ../../../../../'               # Go back 5 directory levels\
-alias .6='cd ../../../../../../'            # Go back 6 directory levels\
-alias edit='subl'                           # edit:         Opens any file in sublime editor\
-alias f='open -a Finder ./'                 # f:            Opens current directory in MacOS Finder\
-alias ~="cd ~"                              # ~:            Go Home\
-alias c='clear'                             # c:            Clear terminal display\
-alias which='type -all'                     # which:        Find executables\
-alias path='echo -e $\{PATH//:/\\\\n\}'         # path:         Echo all executable Paths\
-alias show_options='shopt'                  # Show_options: display bash options settings\
-alias fix_stty='stty sane'                  # fix_stty:     Restore terminal settings when screwed up\
-alias cic='set completion-ignore-case On'   # cic:          Make tab-completion case-insensitive\
-mcd () \{ mkdir -p "$1" && cd "$1"; \}        # mcd:          Makes new Dir and jumps inside\
-trash () \{ command mv "$@" ~/.Trash ; \}     # trash:        Moves a file to the MacOS trash\
-ql () \{ qlmanage -p "$*" >& /dev/null; \}    # ql:           Opens any file in MacOS Quicklook Preview\
-alias DT='tee ~/Desktop/terminalOut.txt'    # DT:           Pipe content to file on MacOS Desktop\
+\strokec4 #   lr:  Full Recursive Directory Listing\strokec5 \
+\strokec4 #   ------------------------------------------\strokec5 \
+\strokec9 alias\strokec5  lr=\strokec7 'ls -R | grep ":$" | sed -e '\strokec8 \\'\strokec7 's/:$//'\strokec8 \\'\strokec7 ' -e '\strokec8 \\'\strokec7 's/[^-][^\\/]*\\//--/g'\strokec8 \\'\strokec7 ' -e '\strokec8 \\'\strokec7 's/^/   /'\strokec8 \\'\strokec7 ' -e '\strokec8 \\'\strokec7 's/-/|/'\strokec8 \\'\strokec7 ' | less'\strokec5 \
 \
-#   lr:  Full Recursive Directory Listing\
-#   ------------------------------------------\
-alias lr='ls -R | grep ":$" | sed -e '\\''s/:$//'\\'' -e '\\''s/[^-][^\\/]*\\//--/g'\\'' -e '\\''s/^/   /'\\'' -e '\\''s/-/|/'\\'' | less'\
-\
-#   mans:   Search manpage given in agument '1' for term given in argument '2' (case insensitive)\
-#           displays paginated result with colored search terms and two lines surrounding each hit.            Example: mans mplayer codec\
-#   --------------------------------------------------------------------\
-    mans () \{\
-        man $1 | grep -iC2 --color=always $2 | less\
+\strokec4 #   mans:   Search manpage given in agument '1' for term given in argument '2' (case insensitive)\strokec5 \
+\strokec4 #           displays paginated result with colored search terms and two lines surrounding each hit.            Example: mans mplayer codec\strokec5 \
+\strokec4 #   --------------------------------------------------------------------\strokec5 \
+    \strokec10 mans\strokec5  () \{\
+        man $1 \strokec6 |\strokec5  grep -iC2 --color=always $2 \strokec6 |\strokec5  less\
     \}\
 \
-#   showa: to remind yourself of an alias (given some part of it)\
-#   ------------------------------------------------------------\
-    showa () \{ /usr/bin/grep --color=always -i -a1 $@ ~/Library/init/bash/aliases.bash | grep -v '^\\s*$' | less -FSRXc ; \}\
+\strokec4 #   showa: to remind yourself of an alias (given some part of it)\strokec5 \
+\strokec4 #   ------------------------------------------------------------\strokec5 \
+    \strokec10 showa\strokec5  () \{ /usr/bin/grep --color=always -i -a1 $@ \strokec6 ~\strokec5 /Library/init/bash/aliases.bash \strokec6 |\strokec5  grep -v \strokec7 '^\\s*$'\strokec5  \strokec6 |\strokec5  less -FSRXc \strokec6 ;\strokec5  \}\
 \
 \
-#   -------------------------------\
-#   3. FILE AND FOLDER MANAGEMENT\
-#   -------------------------------\
+\strokec4 #   -------------------------------\strokec5 \
+\strokec4 #   3. FILE AND FOLDER MANAGEMENT\strokec5 \
+\strokec4 #   -------------------------------\strokec5 \
 \
-zipf () \{ zip -r "$1".zip "$1" ; \}          # zipf:         To create a ZIP archive of a folder\
-alias numFiles='echo $(ls -1 | wc -l)'      # numFiles:     Count of non-hidden files in current dir\
-alias make1mb='mkfile 1m ./1MB.dat'         # make1mb:      Creates a file of 1mb size (all zeros)\
-alias make5mb='mkfile 5m ./5MB.dat'         # make5mb:      Creates a file of 5mb size (all zeros)\
-alias make10mb='mkfile 10m ./10MB.dat'      # make10mb:     Creates a file of 10mb size (all zeros)\
+\strokec10 zipf\strokec5  () \{ zip -r \strokec7 "\strokec5 $1\strokec7 "\strokec5 .zip \strokec7 "\strokec5 $1\strokec7 "\strokec5  \strokec6 ;\strokec5  \}          \strokec4 # zipf:         To create a ZIP archive of a folder\strokec5 \
+\strokec9 alias\strokec5  numFiles=\strokec7 'echo $(ls -1 | wc -l)'\strokec5       \strokec4 # numFiles:     Count of non-hidden files in current dir\strokec5 \
+\strokec9 alias\strokec5  make1mb=\strokec7 'mkfile 1m ./1MB.dat'\strokec5          \strokec4 # make1mb:      Creates a file of 1mb size (all zeros)\strokec5 \
+\strokec9 alias\strokec5  make5mb=\strokec7 'mkfile 5m ./5MB.dat'\strokec5          \strokec4 # make5mb:      Creates a file of 5mb size (all zeros)\strokec5 \
+\strokec9 alias\strokec5  make10mb=\strokec7 'mkfile 10m ./10MB.dat'\strokec5       \strokec4 # make10mb:     Creates a file of 10mb size (all zeros)\strokec5 \
 \
-#   cdf:  'Cd's to frontmost window of MacOS Finder\
-#   ------------------------------------------------------\
-    cdf () \{\
-        currFolderPath=$( /usr/bin/osascript <<EOT\
-            tell application "Finder"\
-                try\
-            set currFolder to (folder of the front window as alias)\
-                on error\
-            set currFolder to (path to desktop folder as alias)\
-                end try\
-                POSIX path of currFolder\
-            end tell\
-EOT\
-        )\
-        echo "cd to \\"$currFolderPath\\""\
-        cd "$currFolderPath"\
+\strokec4 #   cdf:  'Cd's to frontmost window of MacOS Finder\strokec5 \
+\strokec4 #   ------------------------------------------------------\strokec5 \
+    \strokec10 cdf\strokec5  () \{\
+        currFolderPath=\strokec7 $( /usr/bin/osascript \strokec6 <<EOT\strokec5 \
+\strokec7             tell application "Finder"\strokec5 \
+\strokec7                 try\strokec5 \
+\strokec7             set currFolder to (folder of the front window as alias)\strokec5 \
+\strokec7                 on error\strokec5 \
+\strokec7             set currFolder to (path to desktop folder as alias)\strokec5 \
+\strokec7                 end try\strokec5 \
+\strokec7                 POSIX path of currFolder\strokec5 \
+\strokec7             end tell\strokec5 \
+\strokec6 EOT\strokec5 \
+\strokec7         )\strokec5 \
+        \strokec9 echo\strokec5  \strokec7 "cd to \strokec8 \\"\strokec5 $currFolderPath\strokec8 \\"\strokec7 "\strokec5 \
+        \strokec9 cd\strokec5  \strokec7 "\strokec5 $currFolderPath\strokec7 "\strokec5 \
     \}\
 \
-#   extract:  Extract most know archives with one command\
-#   ---------------------------------------------------------\
-    extract () \{\
-        if [ -f $1 ] ; then\
-          case $1 in\
-            *.tar.bz2)   tar xjf $1     ;;\
-            *.tar.gz)    tar xzf $1     ;;\
-            *.bz2)       bunzip2 $1     ;;\
-            *.rar)       unrar e $1     ;;\
-            *.gz)        gunzip $1      ;;\
-            *.tar)       tar xf $1      ;;\
-            *.tbz2)      tar xjf $1     ;;\
-            *.tgz)       tar xzf $1     ;;\
-            *.zip)       unzip $1       ;;\
-            *.Z)         uncompress $1  ;;\
-            *.7z)        7z x $1        ;;\
-            *)     echo "'$1' cannot be extracted via extract()" ;;\
-             esac\
-         else\
-             echo "'$1' is not a valid file"\
-         fi\
-    \}\
-\
-\
-#   ---------------------------\
-#   4. SEARCHING\
-#   ---------------------------\
-\
-alias qfind="find . -name "                 # qfind:    Quickly search for file\
-ff () \{ /usr/bin/find . -name "$@" ; \}      # ff:       Find file under the current directory\
-ffs () \{ /usr/bin/find . -name "$@"'*' ; \}  # ffs:      Find file whose name starts with a given string\
-ffe () \{ /usr/bin/find . -name '*'"$@" ; \}  # ffe:      Find file whose name ends with a given string\
-\
-#   spotlight: Search for a file using MacOS Spotlight's metadata\
-#   -----------------------------------------------------------\
-    spotlight () \{ mdfind "kMDItemDisplayName == '$@'wc"; \}\
-\
-\
-#   ---------------------------\
-#   5. PROCESS MANAGEMENT\
-#   ---------------------------\
-\
-#   findPid: find out the pid of a specified process\
-#   -----------------------------------------------------\
-#       Note that the command name can be specified via a regex\
-#       E.g. findPid '/d$/' finds pids of all processes with names ending in 'd'\
-#       Without the 'sudo' it will only find processes of the current user\
-#   -----------------------------------------------------\
-    findPid () \{ lsof -t -c "$@" ; \}\
-\
-#   memHogsTop, memHogsPs:  Find memory hogs\
-#   -----------------------------------------------------\
-    alias memHogsTop='top -l 1 -o rsize | head -20'\
-    alias memHogsPs='ps wwaxm -o pid,stat,vsize,rss,time,command | head -10'\
-\
-#   cpuHogs:  Find CPU hogs\
-#   -----------------------------------------------------\
-    alias cpu_hogs='ps wwaxr -o pid,stat,%cpu,time,command | head -10'\
-\
-#   topForever:  Continual 'top' listing (every 10 seconds)\
-#   -----------------------------------------------------\
-    alias topForever='top -l 9999999 -s 10 -o cpu'\
-\
-#   ttop:  Recommended 'top' invocation to minimize resources\
-#   ------------------------------------------------------------\
-#       Taken from this macosxhints article\
-#       http://www.macosxhints.com/article.php?story=20060816123853639\
-#   ------------------------------------------------------------\
-    alias ttop="top -R -F -s 10 -o rsize"\
-\
-#   my_ps: List processes owned by my user:\
-#   ------------------------------------------------------------\
-    my_ps() \{ ps $@ -u $USER -o pid,%cpu,%mem,start,time,bsdtime,command ; \}\
-\
-\
-#   ---------------------------\
-#   6. NETWORKING\
-#   ---------------------------\
-\
-alias myip='curl ip.appspot.com'                    # myip:         Public facing IP Address\
-alias netCons='lsof -i'                             # netCons:      Show all open TCP/IP sockets\
-alias flushDNS='dscacheutil -flushcache'            # flushDNS:     Flush out the DNS Cache\
-alias lsock='sudo /usr/sbin/lsof -i -P'             # lsock:        Display open sockets\
-alias lsockU='sudo /usr/sbin/lsof -nP | grep UDP'   # lsockU:       Display only open UDP sockets\
-alias lsockT='sudo /usr/sbin/lsof -nP | grep TCP'   # lsockT:       Display only open TCP sockets\
-alias ipInfo0='ipconfig getpacket en0'              # ipInfo0:      Get info on connections for en0\
-alias ipInfo1='ipconfig getpacket en1'              # ipInfo1:      Get info on connections for en1\
-alias openPorts='sudo lsof -i | grep LISTEN'        # openPorts:    All listening connections\
-alias showBlocked='sudo ipfw list'                  # showBlocked:  All ipfw rules inc/ blocked IPs\
-\
-#   ii:  display useful host related informaton\
-#   -------------------------------------------------------------------\
-    ii() \{\
-        echo -e "\\nYou are logged on $\{RED\}$HOST"\
-        echo -e "\\nAdditionnal information:$NC " ; uname -a\
-        echo -e "\\n$\{RED\}Users logged on:$NC " ; w -h\
-        echo -e "\\n$\{RED\}Current date :$NC " ; date\
-        echo -e "\\n$\{RED\}Machine stats :$NC " ; uptime\
-        echo -e "\\n$\{RED\}Current network location :$NC " ; scselect\
-        echo -e "\\n$\{RED\}Public facing IP Address :$NC " ;myip\
-        #echo -e "\\n$\{RED\}DNS Configuration:$NC " ; scutil --dns\
-        echo\
+\strokec4 #   extract:  Extract most know archives with one command\strokec5 \
+\strokec4 #   ---------------------------------------------------------\strokec5 \
+    \strokec10 extract\strokec5  () \{\
+        \strokec6 if\strokec5  [ \strokec6 -f\strokec5  $1 ] \strokec6 ;\strokec5  \strokec6 then\strokec5 \
+          \strokec6 case\strokec5  $1 \strokec6 in\strokec5 \
+            \strokec6 *\strokec5 .tar.bz2)   tar xjf $1     ;;\
+            \strokec6 *\strokec5 .tar.gz)    tar xzf $1     ;;\
+            \strokec6 *\strokec5 .bz2)       bunzip2 $1     ;;\
+            \strokec6 *\strokec5 .rar)       unrar e $1     ;;\
+            \strokec6 *\strokec5 .gz)        gunzip $1      ;;\
+            \strokec6 *\strokec5 .tar)       tar xf $1      ;;\
+            \strokec6 *\strokec5 .tbz2)      tar xjf $1     ;;\
+            \strokec6 *\strokec5 .tgz)       tar xzf $1     ;;\
+            \strokec6 *\strokec5 .zip)       unzip $1       ;;\
+            \strokec6 *\strokec5 .Z)         uncompress $1  ;;\
+            \strokec6 *\strokec5 .7z)        7z x $1        ;;\
+            \strokec6 *\strokec5 )     \strokec9 echo\strokec5  \strokec7 "'\strokec5 $1\strokec7 ' cannot be extracted via extract()"\strokec5  ;;\
+             \strokec6 esac\strokec5 \
+         \strokec6 else\strokec5 \
+             \strokec9 echo\strokec5  \strokec7 "'\strokec5 $1\strokec7 ' is not a valid file"\strokec5 \
+         \strokec6 fi\strokec5 \
     \}\
 \
 \
-#   ---------------------------------------\
-#   7. SYSTEMS OPERATIONS & INFORMATION\
-#   ---------------------------------------\
+\strokec4 #   ---------------------------\strokec5 \
+\strokec4 #   4. SEARCHING\strokec5 \
+\strokec4 #   ---------------------------\strokec5 \
 \
-alias mountReadWrite='/sbin/mount -uw /'    # mountReadWrite:   For use when booted into single-user\
+\strokec9 alias\strokec5  qfind=\strokec7 "find . -name "\strokec5                  \strokec4 # qfind:    Quickly search for file\strokec5 \
+\strokec10 ff\strokec5  () \{ /usr/bin/find \strokec9 .\strokec5  -name \strokec7 "\strokec5 $@\strokec7 "\strokec5  \strokec6 ;\strokec5  \}      \strokec4 # ff:       Find file under the current directory\strokec5 \
+\strokec10 ffs\strokec5  () \{ /usr/bin/find \strokec9 .\strokec5  -name \strokec7 "\strokec5 $@\strokec7 "'*'\strokec5  \strokec6 ;\strokec5  \}  \strokec4 # ffs:      Find file whose name starts with a given string\strokec5 \
+\strokec10 ffe\strokec5  () \{ /usr/bin/find \strokec9 .\strokec5  -name \strokec7 '*'"\strokec5 $@\strokec7 "\strokec5  \strokec6 ;\strokec5  \}  \strokec4 # ffe:      Find file whose name ends with a given string\strokec5 \
 \
-#   cleanupDS:  Recursively delete .DS_Store files\
-#   -------------------------------------------------------------------\
-    alias cleanupDS="find . -type f -name '*.DS_Store' -ls -delete"\
-\
-#   finderShowHidden:   Show hidden files in Finder\
-#   finderHideHidden:   Hide hidden files in Finder\
-#   -------------------------------------------------------------------\
-    alias finderShowHidden='defaults write com.apple.finder ShowAllFiles TRUE'\
-    alias finderHideHidden='defaults write com.apple.finder ShowAllFiles FALSE'\
-\
-#   cleanupLS:  Clean up LaunchServices to remove duplicates in the "Open With" menu\
-#   -----------------------------------------------------------------------------------\
-    alias cleanupLS="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"\
-\
-#    screensaverDesktop: Run a screensaver on the Desktop\
-#   -----------------------------------------------------------------------------------\
-    alias screensaverDesktop='/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -background'\
-\
-#   ---------------------------------------\
-#   8. WEB DEVELOPMENT\
-#   ---------------------------------------\
-\
-alias apacheEdit='sudo edit /etc/httpd/httpd.conf'      # apacheEdit:       Edit httpd.conf\
-alias apacheRestart='sudo apachectl graceful'           # apacheRestart:    Restart Apache\
-alias editHosts='sudo edit /etc/hosts'                  # editHosts:        Edit /etc/hosts file\
-alias herr='tail /var/log/httpd/error_log'              # herr:             Tails HTTP error logs\
-alias apacheLogs="less +F /var/log/apache2/error_log"   # Apachelogs:   Shows apache error logs\
-httpHeaders () \{ /usr/bin/curl -I -L $@ ; \}             # httpHeaders:      Grabs headers from web page\
-\
-#   httpDebug:  Download a web page and show info on what took time\
-#   -------------------------------------------------------------------\
-    httpDebug () \{ /usr/bin/curl $@ -o /dev/null -w "dns: %\{time_namelookup\} connect: %\{time_connect\} pretransfer: %\{time_pretransfer\} starttransfer: %\{time_starttransfer\} total: %\{time_total\}\\n" ; \}\
+\strokec4 #   spotlight: Search for a file using MacOS Spotlight's metadata\strokec5 \
+\strokec4 #   -----------------------------------------------------------\strokec5 \
+    \strokec10 spotlight\strokec5  () \{ mdfind \strokec7 "kMDItemDisplayName == '\strokec5 $@\strokec7 'wc"\strokec6 ;\strokec5  \}\
 \
 \
-#   ---------------------------------------\
-#   9. REMINDERS & NOTES\
-#   ---------------------------------------\
+\strokec4 #   ---------------------------\strokec5 \
+\strokec4 #   5. PROCESS MANAGEMENT\strokec5 \
+\strokec4 #   ---------------------------\strokec5 \
 \
-#   remove_disk: spin down unneeded disk\
-#   ---------------------------------------\
-#   diskutil eject /dev/disk1s3\
+\strokec4 #   ssh connection with agentForwarding\strokec5 \
+\strokec4 #   -----------------------------------------------------\strokec5 \
+\strokec10 ssha\strokec5  () \{\
+    \strokec9 eval\strokec5  \strokec7 $(ssh-agent -s)\strokec5 \
+    ssh-add -K\
+    ssh -A \strokec7 "\strokec5 $1\strokec7 "\strokec5 \
+\} \
 \
-#   to change the password on an encrypted disk image:\
-#   ---------------------------------------\
-#   hdiutil chpass /path/to/the/diskimage\
+\strokec4 #   findPid: find out the pid of a specified process\strokec5 \
+\strokec4 #   -----------------------------------------------------\strokec5 \
+\strokec4 #       Note that the command name can be specified via a regex\strokec5 \
+\strokec4 #       E.g. findPid '/d$/' finds pids of all processes with names ending in 'd'\strokec5 \
+\strokec4 #       Without the 'sudo' it will only find processes of the current user\strokec5 \
+\strokec4 #   -----------------------------------------------------\strokec5 \
+    \strokec10 findPid\strokec5  () \{ lsof -t -c \strokec7 "\strokec5 $@\strokec7 "\strokec5  \strokec6 ;\strokec5  \}\
 \
-#   to mount a read-only disk image as read-write:\
-#   ---------------------------------------\
-#   hdiutil attach example.dmg -shadow /tmp/example.shadow -noverify\
+\strokec4 #   memHogsTop, memHogsPs:  Find memory hogs\strokec5 \
+\strokec4 #   -----------------------------------------------------\strokec5 \
+    \strokec9 alias\strokec5  memHogsTop=\strokec7 'top -l 1 -o rsize | head -20'\strokec5 \
+    \strokec9 alias\strokec5  memHogsPs=\strokec7 'ps wwaxm -o pid,stat,vsize,rss,time,command | head -10'\strokec5 \
 \
-#   mounting a removable drive (of type msdos or hfs)\
-#   ---------------------------------------\
-#   mkdir /Volumes/Foo\
-#   ls /dev/disk*   to find out the device to use in the mount command)\
-#   mount -t msdos /dev/disk1s1 /Volumes/Foo\
-#   mount -t hfs /dev/disk1s1 /Volumes/Foo\
+\strokec4 #   cpuHogs:  Find CPU hogs\strokec5 \
+\strokec4 #   -----------------------------------------------------\strokec5 \
+    \strokec9 alias\strokec5  cpu_hogs=\strokec7 'ps wwaxr -o pid,stat,%cpu,time,command | head -10'\strokec5 \
 \
-#   to create a file of a given size: /usr/sbin/mkfile or /usr/bin/hdiutil\
-#   ---------------------------------------\
-#   e.g.: mkfile 10m 10MB.dat\
-#   e.g.: hdiutil create -size 10m 10MB.dmg\
-#   the above create files that are almost all zeros - if random bytes are desired\
-#   then use: ~/Dev/Perl/randBytes 1048576 > 10MB.dat\
+\strokec4 #   topForever:  Continual 'top' listing (every 10 seconds)\strokec5 \
+\strokec4 #   -----------------------------------------------------\strokec5 \
+    \strokec9 alias\strokec5  topForever=\strokec7 'top -l 9999999 -s 10 -o cpu'\strokec5 \
+\
+\strokec4 #   ttop:  Recommended 'top' invocation to minimize resources\strokec5 \
+\strokec4 #   ------------------------------------------------------------\strokec5 \
+\strokec4 #       Taken from this macosxhints article\strokec5 \
+\strokec4 #       http://www.macosxhints.com/article.php?story=20060816123853639\strokec5 \
+\strokec4 #   ------------------------------------------------------------\strokec5 \
+    \strokec9 alias\strokec5  ttop=\strokec7 "top -R -F -s 10 -o rsize"\strokec5 \
+\
+\strokec4 #   my_ps: List processes owned by my user:\strokec5 \
+\strokec4 #   ------------------------------------------------------------\strokec5 \
+    \strokec10 my_ps\strokec5 () \{ ps $@ -u $USER -o pid,%cpu,%mem,start,time,bsdtime,command \strokec6 ;\strokec5  \}\
+\
+\
+\strokec4 #   ---------------------------\strokec5 \
+\strokec4 #   6. NETWORKING\strokec5 \
+\strokec4 #   ---------------------------\strokec5 \
+\
+\strokec9 alias\strokec5  myip=\strokec7 'curl ip.appspot.com'\strokec5                     \strokec4 # myip:         Public facing IP Address\strokec5 \
+\strokec9 alias\strokec5  netCons=\strokec7 'lsof -i'\strokec5                              \strokec4 # netCons:      Show all open TCP/IP sockets\strokec5 \
+\strokec9 alias\strokec5  flushDNS=\strokec7 'dscacheutil -flushcache'\strokec5             \strokec4 # flushDNS:     Flush out the DNS Cache\strokec5 \
+\strokec9 alias\strokec5  lsock=\strokec7 'sudo /usr/sbin/lsof -i -P'\strokec5              \strokec4 # lsock:        Display open sockets\strokec5 \
+\strokec9 alias\strokec5  lsockU=\strokec7 'sudo /usr/sbin/lsof -nP | grep UDP'\strokec5    \strokec4 # lsockU:       Display only open UDP sockets\strokec5 \
+\strokec9 alias\strokec5  lsockT=\strokec7 'sudo /usr/sbin/lsof -nP | grep TCP'\strokec5    \strokec4 # lsockT:       Display only open TCP sockets\strokec5 \
+\strokec9 alias\strokec5  ipInfo0=\strokec7 'ipconfig getpacket en0'\strokec5               \strokec4 # ipInfo0:      Get info on connections for en0\strokec5 \
+\strokec9 alias\strokec5  ipInfo1=\strokec7 'ipconfig getpacket en1'\strokec5               \strokec4 # ipInfo1:      Get info on connections for en1\strokec5 \
+\strokec9 alias\strokec5  openPorts=\strokec7 'sudo lsof -i | grep LISTEN'\strokec5         \strokec4 # openPorts:    All listening connections\strokec5 \
+\strokec9 alias\strokec5  showBlocked=\strokec7 'sudo ipfw list'\strokec5                   \strokec4 # showBlocked:  All ipfw rules inc/ blocked IPs\strokec5 \
+\
+\strokec4 #   ii:  display useful host related informaton\strokec5 \
+\strokec4 #   -------------------------------------------------------------------\strokec5 \
+    \strokec10 ii\strokec5 () \{\
+        \strokec9 echo\strokec5  -e \strokec7 "\\nYou are logged on \strokec5 $\{RED\}$HOST\strokec7 "\strokec5 \
+        \strokec9 echo\strokec5  -e \strokec7 "\\nAdditionnal information:\strokec5 $NC\strokec7  "\strokec5  \strokec6 ;\strokec5  uname -a\
+        \strokec9 echo\strokec5  -e \strokec7 "\\n\strokec5 $\{RED\}\strokec7 Users logged on:\strokec5 $NC\strokec7  "\strokec5  \strokec6 ;\strokec5  w -h\
+        \strokec9 echo\strokec5  -e \strokec7 "\\n\strokec5 $\{RED\}\strokec7 Current date :\strokec5 $NC\strokec7  "\strokec5  \strokec6 ;\strokec5  date\
+        \strokec9 echo\strokec5  -e \strokec7 "\\n\strokec5 $\{RED\}\strokec7 Machine stats :\strokec5 $NC\strokec7  "\strokec5  \strokec6 ;\strokec5  uptime\
+        \strokec9 echo\strokec5  -e \strokec7 "\\n\strokec5 $\{RED\}\strokec7 Current network location :\strokec5 $NC\strokec7  "\strokec5  \strokec6 ;\strokec5  scselect\
+        \strokec9 echo\strokec5  -e \strokec7 "\\n\strokec5 $\{RED\}\strokec7 Public facing IP Address :\strokec5 $NC\strokec7  "\strokec5  \strokec6 ;\strokec5 myip\
+        \strokec4 #echo -e "\\n$\{RED\}DNS Configuration:$NC " ; scutil --dns\strokec5 \
+        \strokec9 echo\strokec5 \
+    \}\
+\
+\
+\strokec4 #   ---------------------------------------\strokec5 \
+\strokec4 #   7. SYSTEMS OPERATIONS & INFORMATION\strokec5 \
+\strokec4 #   ---------------------------------------\strokec5 \
+\
+\strokec9 alias\strokec5  mountReadWrite=\strokec7 '/sbin/mount -uw /'\strokec5     \strokec4 # mountReadWrite:   For use when booted into single-user\strokec5 \
+\
+\strokec4 #   cleanupDS:  Recursively delete .DS_Store files\strokec5 \
+\strokec4 #   -------------------------------------------------------------------\strokec5 \
+    \strokec9 alias\strokec5  cleanupDS=\strokec7 "find . -type f -name '*.DS_Store' -ls -delete"\strokec5 \
+\
+\strokec4 #   finderShowHidden:   Show hidden files in Finder\strokec5 \
+\strokec4 #   finderHideHidden:   Hide hidden files in Finder\strokec5 \
+\strokec4 #   -------------------------------------------------------------------\strokec5 \
+    \strokec9 alias\strokec5  finderShowHidden=\strokec7 'defaults write com.apple.finder ShowAllFiles TRUE'\strokec5 \
+    \strokec9 alias\strokec5  finderHideHidden=\strokec7 'defaults write com.apple.finder ShowAllFiles FALSE'\strokec5 \
+\
+\strokec4 #   cleanupLS:  Clean up LaunchServices to remove duplicates in the "Open With" menu\strokec5 \
+\strokec4 #   -----------------------------------------------------------------------------------\strokec5 \
+    \strokec9 alias\strokec5  cleanupLS=\strokec7 "/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"\strokec5 \
+\
+\strokec4 #    screensaverDesktop: Run a screensaver on the Desktop\strokec5 \
+\strokec4 #   -----------------------------------------------------------------------------------\strokec5 \
+    \strokec9 alias\strokec5  screensaverDesktop=\strokec7 '/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -background'\strokec5 \
+\
+\strokec4 #   ---------------------------------------\strokec5 \
+\strokec4 #   8. WEB DEVELOPMENT\strokec5 \
+\strokec4 #   ---------------------------------------\strokec5 \
+\
+\strokec9 alias\strokec5  apacheEdit=\strokec7 'sudo edit /etc/httpd/httpd.conf'\strokec5       \strokec4 # apacheEdit:       Edit httpd.conf\strokec5 \
+\strokec9 alias\strokec5  apacheRestart=\strokec7 'sudo apachectl graceful'\strokec5            \strokec4 # apacheRestart:    Restart Apache\strokec5 \
+\strokec9 alias\strokec5  editHosts=\strokec7 'sudo edit /etc/hosts'\strokec5                   \strokec4 # editHosts:        Edit /etc/hosts file\strokec5 \
+\strokec9 alias\strokec5  herr=\strokec7 'tail /var/log/httpd/error_log'\strokec5               \strokec4 # herr:             Tails HTTP error logs\strokec5 \
+\strokec9 alias\strokec5  apacheLogs=\strokec7 "less +F /var/log/apache2/error_log"\strokec5    \strokec4 # Apachelogs:   Shows apache error logs\strokec5 \
+\strokec10 httpHeaders\strokec5  () \{ /usr/bin/curl -I -L $@ \strokec6 ;\strokec5  \}             \strokec4 # httpHeaders:      Grabs headers from web page\strokec5 \
+\
+\strokec4 #   httpDebug:  Download a web page and show info on what took time\strokec5 \
+\strokec4 #   -------------------------------------------------------------------\strokec5 \
+    \strokec10 httpDebug\strokec5  () \{ /usr/bin/curl $@ -o /dev/null -w \strokec7 "dns: %\{time_namelookup\} connect: %\{time_connect\} pretransfer: %\{time_pretransfer\} starttransfer: %\{time_starttransfer\} total: %\{time_total\}\\n"\strokec5  \strokec6 ;\strokec5  \}\
+\
+\
+\strokec4 #   ---------------------------------------\strokec5 \
+\strokec4 #   9. REMINDERS & NOTES\strokec5 \
+\strokec4 #   ---------------------------------------\strokec5 \
+\
+\strokec4 #   remove_disk: spin down unneeded disk\strokec5 \
+\strokec4 #   ---------------------------------------\strokec5 \
+\strokec4 #   diskutil eject /dev/disk1s3\strokec5 \
+\
+\strokec4 #   to change the password on an encrypted disk image:\strokec5 \
+\strokec4 #   ---------------------------------------\strokec5 \
+\strokec4 #   hdiutil chpass /path/to/the/diskimage\strokec5 \
+\
+\strokec4 #   to mount a read-only disk image as read-write:\strokec5 \
+\strokec4 #   ---------------------------------------\strokec5 \
+\strokec4 #   hdiutil attach example.dmg -shadow /tmp/example.shadow -noverify\strokec5 \
+\
+\strokec4 #   mounting a removable drive (of type msdos or hfs)\strokec5 \
+\strokec4 #   ---------------------------------------\strokec5 \
+\strokec4 #   mkdir /Volumes/Foo\strokec5 \
+\strokec4 #   ls /dev/disk*   to find out the device to use in the mount command)\strokec5 \
+\strokec4 #   mount -t msdos /dev/disk1s1 /Volumes/Foo\strokec5 \
+\strokec4 #   mount -t hfs /dev/disk1s1 /Volumes/Foo\strokec5 \
+\
+\strokec4 #   to create a file of a given size: /usr/sbin/mkfile or /usr/bin/hdiutil\strokec5 \
+\strokec4 #   ---------------------------------------\strokec5 \
+\strokec4 #   e.g.: mkfile 10m 10MB.dat\strokec5 \
+\strokec4 #   e.g.: hdiutil create -size 10m 10MB.dmg\strokec5 \
+\strokec4 #   the above create files that are almost all zeros - if random bytes are desired\strokec5 \
+\strokec4 #   then use: ~/Dev/Perl/randBytes 1048576 > 10MB.dat\strokec5 \
+\
+\strokec4 # Setting PATH for Python 3.6\strokec5 \
+\strokec4 # The original version is saved in .bash_profile.pysave\strokec5 \
+PATH=\strokec7 "/Library/Frameworks/Python.framework/Versions/3.6/bin:\strokec5 $\{PATH\}\strokec7 "\strokec5 \
+\strokec6 export\strokec5  PATH\
+\
 }
