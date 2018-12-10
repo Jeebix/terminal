@@ -67,7 +67,13 @@ git add . (pour ajouter tous les fichiers dont les conflits sont r\'e9solus)\
 git commit -m 'commit'\
 \
 \ul // Corriger dernier commit\ulnone \
-rm -rf .git\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 git commit --amend\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \ul // R\'e9initialiser d\'e9p\'f4t git\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \ulnone rm -rf .git\
 git init\
 git add .\
 git commit -m 'commit'\
@@ -76,9 +82,6 @@ git commit -m 'commit'\
 git push --force origin master\cf0 \cb1 \CocoaLigature1 \
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
 \cf0 \
-\ul // R\'e9initialiser d\'e9p\'f4t git\ulnone \
-git commit --amend\
-\
 \ul // Changer de branche\ulnone \
 git checkout nom_branche\
 \
