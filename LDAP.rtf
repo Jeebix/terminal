@@ -1,0 +1,28 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf500
+{\fonttbl\f0\fnil\fcharset0 Monaco;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red255\green255\blue255;
+\red53\green135\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c99971;\cssrgb\c100000\c100000\c99985;
+\cssrgb\c25794\c61540\c100000;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww22780\viewh12300\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\ul \ulc2 # Attention dans le LDAP il y a aussi les utilisateurs d\'e9sactiv\'e9s. Pensez \'e0 filtrer les r\'e9sultats :\cf2 \ulnone \
+Filtre type pour les utilisateurs AD actifs : "(&amp;(objectCategory=Person)(sAMAccountName=*)(!(UserAccountControl:1.2.840.113556.1.4.803:=2)))"\
+\
+\cf2 \ul \ulc2 # Pour "explorer" le LDAP :\cf2 \ulnone \
+L'appli Java "LBE" (LDAP Browser Editor) qu'on utilise depuis des ann\'e9es ne fonctionne pas (refuse le certificat SSL).\
+Utiliser \'e0 la place Apache Directory Studio {\field{\*\fldinst{HYPERLINK "http://directory.apache.org/studio/"}}{\fldrslt \cf2 \ul \ulc5 http://directory.apache.org/studio/}}\
+2 serveurs disponibles : {\field{\*\fldinst{HYPERLINK "http://dc01.ad.initiatives.vip/"}}{\fldrslt \cf2 \ul \ulc5 dc01.ad.initiatives.vip}} ; {\field{\*\fldinst{HYPERLINK "http://dc02.ad.initiatives.vip/"}}{\fldrslt \cf2 \ul \ulc5 dc02.ad.initiatives.vip}} \
+Protocole : LDAPS (LDAP sur SSL)\
+Port : 636\
+Bind DN : cn=<utilisateur>,CN=Users,DC=ad,DC=initiatives,DC=vip\
+\'a0\'a0\'a0 O\'f9 <utilisateur> est le login de l'annuaire et de Sccore : "ls" pour moi\uc0\u8232 Mot de passe : celui de l'annuaire\
+Base DN (alias "nom distinct de base") : DC=ad,DC=initiatives,DC=vip\
+\'a0\'a0\'a0 Les utilisateurs et les groupes sont dans CN=Users,DC=ad,DC=initiatives,DC=vip\
+\
+En plus des logins de l'annuaire, Active Directory a quelques utilisateurs qui lui sont propres.\
+Le login "administrateur" est r\'e9serv\'e9 pour la gestion du domaine AD : ne jamais l'utiliser dans un script.\
+On cr\'e9era des comptes d\'e9di\'e9s pour les applis qui utiliseront le LDAP.}
